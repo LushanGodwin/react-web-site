@@ -10,7 +10,7 @@ interface ShoeCardProps {
 
 const ShoeCard = (props: ShoeCardProps) => {
     return (
-        <div className="card bg-base-100 w-80 shadow-xl">
+        <div className="card mb-12 w-72 shadow-xl">
             <figure className="px-5 pt-10">
                 <img
                     src={props.image}
