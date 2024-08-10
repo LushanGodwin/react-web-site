@@ -28,6 +28,8 @@ import shoe25 from "../assets/images/shoe25.png"
 import Slider from "react-slick";
 import Topic from '../components/Topic';
 import { useState } from 'react';
+// import React, { useContext } from 'react';
+// import { CartContext } from '../context/CartContext';
 
 const Home = () => {
 
@@ -52,7 +54,7 @@ const Home = () => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -70,22 +72,23 @@ const Home = () => {
     };
 
     const [productType, setProductType] = useState<string>('mens');
+    // const { cartItems, addItem, removeItem, clearCart } = useContext(CartContext);
 
     return (
         <div>
-            <div>
-                <img src={logo} className='h-[500px] w-full' />
+            <div className='flex justify-center mt-8'>
+                <img src={logo} className='h-96 min-h-[10rem] object-cover' />
             </div>
             <div className='w-full px-12 my-8 mb-20'>
                 <Topic title='Top Deals' />
                 <div className="slider-container">
                     <Slider {...settings}>
-                        <ShoeCard name='Nike airmax zoom Pegasus - Yellow and Red' category="Mens' shoes" price={14500} image={shoe6} />
+                        <ShoeCard name='Nike airmax zoom Pegasus - Yellow and Red' category="Mens' shoes" price={14500} image={shoe6}/>
                         <ShoeCard name='Air Jordan 4 Retro - A MA MANIERE' category="Mens' shoes" price={16500} image={ shoe7} />
                         <ShoeCard name='Nike Air Force 1 - white' category="Mens' shoes" price={12500} image={shoe8} />
                         <ShoeCard name='Nike airmax zoom Pegasus - orange and green' category="Mens' shoes" price={14500} image={shoe9} />
                         <ShoeCard name='Lacoste - Green And White' category="Mens' shoes" price={15500} image={shoe10} />
-                        <ShoeCard name='Lacoste - White And Blue' category="Mens' shoes" price={15500} image={shoe11} />
+                        <ShoeCard name='Lacoste - White And Blue' category="Mens' shoes" price={15500} image={shoe11}/>
                     </Slider>
                 </div>
             </div>
@@ -94,12 +97,12 @@ const Home = () => {
                 <Topic title='Best Sell Products' />
                 <div className="slider-container">
                     <Slider {...settings}>
-                        <ShoeCard name="270 NIKE MEN'S SHOE - Brown" category="Mens' shoes" price={14500} image={shoe12} />
+                        <ShoeCard name="270 NIKE MEN'S SHOE - Brown" category="Mens' shoes" price={14500} image={shoe12}/>
                         <ShoeCard name="New Balance 9060 - Black" category="Mens' shoes" price={18500} image={shoe13} />
                         <ShoeCard name='Nike Air Max 2017 Black and White' category="Mens' shoes" price={14500} image={shoe14} />
                         <ShoeCard name="Nike Air Max 270 White and Black" category="Mens' shoes" price={14500} image={shoe15} />
-                        <ShoeCard name="Nike Air Max 270 Black and Gold" category="Mens' shoes" price={14500} image={shoe16} />
-                        <ShoeCard name='Nike Air Max 270 white and green shoe' category="Mens' shoes" price={14500} image={shoe17} />
+                        <ShoeCard name="Nike Air Max 270 Black and Gold" category="Mens' shoes" price={14500} image={shoe16}/>
+                        <ShoeCard name='Nike Air Max 270 white and green shoe' category="Mens' shoes" price={14500} image={shoe17}/>
 
                     </Slider>
                 </div>
