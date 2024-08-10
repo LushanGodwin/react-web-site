@@ -1,5 +1,7 @@
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { CartContext } from '../context/CartContext';
+import React, { useContext } from 'react';
 
 interface ShoeCardProps {
     name: string;
@@ -9,6 +11,12 @@ interface ShoeCardProps {
 }
 
 const ShoeCard = (props: ShoeCardProps) => {
+    const { addItem } = useContext(CartContext);
+
+    const handleAddCart = () => {
+        addItem({ name: props.name, price: props.price, image: props.image, category: props.category });
+    }
+
     return (
         <div className="card mb-12 w-72 shadow-xl">
             <figure className="px-5 pt-10">
@@ -24,9 +32,9 @@ const ShoeCard = (props: ShoeCardProps) => {
                     <p className="font-bold text-lg">Rs. {props.price}</p>
                     <div>
                         <button className="btn btn-ghost">
-                            <FontAwesomeIcon icon={faHeart} size="2x" className="text-red-500"/>
+                            <FontAwesomeIcon icon={faHeart} size="2x" className="text-red-500" />
                         </button>
-                        <button className="btn btn-ghost">
+                        <button className="btn btn-ghost" onClick={handleAddCart}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-7 w-7"
