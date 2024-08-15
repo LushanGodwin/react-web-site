@@ -7,7 +7,7 @@ import { CartContext } from '../context/CartContext';
 
 
 const Header = () => {
-    const { cartItems, addItem, removeItem, clearCart } = useContext(CartContext);
+    const { cartItems } = useContext(CartContext);
     const [selectedValue, setSelectedValue] = useState<string>('');
     const navigate = useNavigate();
 

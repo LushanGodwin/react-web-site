@@ -1,7 +1,7 @@
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartContext } from '../context/CartContext';
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 
 interface ShoeCardProps {
     name: string;

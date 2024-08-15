@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
 interface ShoesCardProps {
@@ -9,7 +9,7 @@ interface ShoesCardProps {
 }
 
 const CartItem = (props: ShoesCardProps) => {
-    const { cartItems, addItem, removeItem, clearCart } = useContext(CartContext);
+    const {  removeItem } = useContext(CartContext);
 
     return (
         <div className="flex items-center justify-between p-4 border-b">

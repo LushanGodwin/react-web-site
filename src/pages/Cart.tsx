@@ -1,10 +1,10 @@
 import CartItem from "../components/CartItem";
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 
 
 const Cart = () => {
-    const { cartItems, addItem, removeItem, clearCart } = useContext(CartContext);
+    const { cartItems,  clearCart } = useContext(CartContext);
 
     const [subtotal, setSubtotal] = useState<number>(0);
     const [tax, setTax] = useState<number>(0);

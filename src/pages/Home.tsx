@@ -1,6 +1,5 @@
 import logo from '../assets/images/shoeAdvertise.png'
 import ShoeCard from '../components/ShoeCard';
-import Carousel from "react-multi-carousel";
 import shoe from "../assets/images/shoe.jpg"
 import shoe1 from "../assets/images/shoe1.jpg"
 import shoe2 from "../assets/images/shoe2.jpg"
