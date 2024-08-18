@@ -61,11 +61,11 @@ const Header = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Mens' Wear</a></li>
-                        <li><a>Ladies' Wear</a></li>
-                        <li><a>Kids' Wear</a></li>
-                        <li><a>Bags</a></li>
-                        <li><a>Offers</a></li>
+                        <li><a><NavLink to='/menShoes'>Mens' Wear</NavLink></a></li>
+                        <li><a><NavLink to='/ladiesShoes'>Ladies' Wear</NavLink></a></li>
+                        <li><a><NavLink to='/kidShoes'>Kids' Wear</NavLink></a></li>
+                        <li><a><NavLink to='/bags'>Bags</NavLink></a></li>
+                        <li><a><NavLink to='/offers'>Offers</NavLink></a></li>
                     </ul>
                 </div>
                 <NavLink to='/'>
